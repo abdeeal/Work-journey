@@ -27,7 +27,9 @@ const Navbar = ({ searchExplore, menuButton, setMenuButton }) => {
           className={`${searchExplore == 1 && " pb-[2rem] lg:shadow-md"} ${
             menuButton && searchExplore == 1 && "bg-white"
           } w-full h-auto flex justify-between ${
-            location.pathname.startsWith("/profile") &&
+            (location.pathname != "/" &&
+              location.pathname != "/explore" &&
+              location.pathname != "/creators") &&
             "pb-[2rem] bg-white shadow-md"
           } pt-[2.5rem] items-center sticky top-0 z-[100] lg:px-[128px] px-[16px] md:px-[64px]`}
         >

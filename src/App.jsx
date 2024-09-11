@@ -7,6 +7,7 @@ import Project from "./pages/Project";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import { AnimatePresence } from "framer-motion";
+import Error from "./pages/Error";
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Project" element={<Project />} />
         <Route path="/profile/me" element={<Profile />} />
         <Route path="/profile/creators" element={<Profile />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </AnimatePresence>
   );

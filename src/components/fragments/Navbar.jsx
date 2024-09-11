@@ -95,14 +95,14 @@ const Navbar = ({ searchExplore, menuButton, setMenuButton }) => {
               />
             </Link>
           ) : (
-            <Button
-              background
-              className={"text-[0.8rem] px-8 md:inline hidden font-semibold"}
-            >
-              <Link to={`/login?to=${location.pathname + location.search}`}>
+            <Link to={`/login?to=${location.pathname + location.search}`}>
+              <Button
+                background
+                className={"text-[0.8rem] px-8 md:inline hidden font-semibold"}
+              >
                 Login
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           <button className="md:hidden z-20">
             <MenuButton
@@ -115,7 +115,7 @@ const Navbar = ({ searchExplore, menuButton, setMenuButton }) => {
         </motion.nav>
       ) : (
         <nav
-        id="navbar"
+          id="navbar"
           className={`w-full flex justify-between pt-[2rem] pb-[2rem] bg-white items-center sticky top-0 px-[16px] z-[999] h-auto ${
             searchExplore != 1 && "shadow-md"
           }`}
